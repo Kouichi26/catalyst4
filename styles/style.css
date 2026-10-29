@@ -132,10 +132,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-    
     .hero-content h1 {
         font-size: 2.3rem;
     }
@@ -938,3 +934,78 @@ body {
     font-size: 0.85rem;
 }
 /* ===== FOOTER END ===== */
+
+
+/* ==========================================
+   CSS RESPONSIVE (MOBILE & TABLET)
+   ========================================== */
+
+/* Smooth Scroll agar perpindahan menu halus */
+html {
+  scroll-behavior: smooth;
+}
+
+.hamburger {
+  display: none;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 5px 0;
+  background-color: #ffffff;
+}
+
+/* Tampilan khusus untuk layar HP/Tablet (maksimal 768px) */
+@media screen and (max-width: 768px) {
+  /* 1. Navbar & Hamburger Menu */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu ul {
+    display: none; /* Sembunyikan menu navigasi default di HP */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(18, 18, 18, 0.98);
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  /* Class 'active' dipanggil oleh JavaScript saat hamburger diklik */
+  .nav-menu ul.active {
+    display: flex;
+  }
+
+  /* 2. Layout Section di Layar Kecil */
+  .hero, .about, .programs, .contact {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  /* 3. Ukuran Teks dan Tombol */
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.5rem; }
+  p  { font-size: 0.95rem; }
+
+  .btn, button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .hamburger {
+    padding: 8px;
+  }
+}
