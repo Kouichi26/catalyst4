@@ -265,3 +265,283 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===== PROGRAMS START ===== */
+#programs {
+    scroll-margin-top: 100px;
+}
+
+.programs-section {
+    padding: 100px 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+.programs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.programs-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.programs-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.programs-header p {
+    color: #b3b3b3;
+    font-size: 1.1rem;
+}
+
+/* Membership Cards */
+.membership-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.membership-card {
+    background-color: #242424;
+    padding: 40px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.membership-card:hover {
+    transform: translateY(-10px);
+    border-color: #ff3b3b;
+    box-shadow: 0 15px 40px rgba(255, 59, 59, 0.1);
+}
+
+.membership-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.card-price {
+    margin-bottom: 30px;
+}
+
+.price-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ff3b3b;
+    display: block;
+}
+
+.price-period {
+    font-size: 0.95rem;
+    color: #b3b3b3;
+}
+
+.card-benefits {
+    list-style: none;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.card-benefits li {
+    padding: 8px 0;
+    color: #cccccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-benefits li:last-child {
+    border-bottom: none;
+}
+
+.membership-card .btn-primary {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+/* Popular Badge */
+.membership-card--popular {
+    border: 2px solid #ff3b3b;
+    transform: scale(1.05);
+}
+
+.membership-card--popular:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.badge-popular {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff3b3b;
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Facilities */
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+}
+
+.facility-item {
+    background-color: #242424;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.facility-item:hover {
+    transform: translateY(-5px);
+    border-color: #ff3b3b;
+}
+
+.facility-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.facility-item h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.facility-item p {
+    color: #b3b3b3;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Trainers */
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.trainer-card {
+    background-color: #242424;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.trainer-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff3b3b;
+}
+
+.trainer-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.trainer-info {
+    padding: 30px;
+}
+
+.trainer-card h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.trainer-specialty {
+    color: #ff3b3b;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.trainer-card p {
+    color: #b3b3b3;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .membership-cards,
+    .facilities-grid,
+    .trainers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .membership-card--popular {
+        transform: scale(1);
+    }
+
+    .membership-card--popular:hover {
+        transform: translateY(-10px);
+    }
+
+    .programs-header h2 {
+        font-size: 2rem;
+    }
+
+    .price-amount {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .programs-section {
+        padding: 60px 20px;
+    }
+
+    .programs-header {
+        margin-bottom: 40px;
+    }
+
+    .membership-cards,
+    .facilities-grid,
+    .trainers-grid {
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
+    .programs-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .membership-card,
+    .facility-item {
+        padding: 25px;
+    }
+
+    .price-amount {
+        font-size: 1.75rem;
+    }
+
+    .trainer-card img {
+        height: 200px;
+    }
+}
+/* ===== PROGRAMS END ===== */
