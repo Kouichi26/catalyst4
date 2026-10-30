@@ -6,6 +6,7 @@
     <title>IronForge Gym</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js" defer></script>
 </head>
 <body>
 
@@ -14,7 +15,7 @@
             <div class="logo">
                 <a href="#">Iron<span>Forge</span></a>
             </div>
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="primary-navigation">
                 <ul>
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -22,6 +23,11 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <button class="hamburger" type="button" aria-label="Buka menu navigasi" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
             <div class="nav-action">
                 <a href="#programs" class="btn-primary">Gabung Sekarang</a>
             </div>
